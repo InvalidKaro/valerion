@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
-      - uses: actions/@angular/cli
+      - uses: actions/angular/cli
       - run: npm ci --force && npm run build --force && ng build --force
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
