@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install Angular CLI
-        run: npm install -g @angular/cli
+        run: npm install -g @angular/cli && npm install git+https://github.com/angular/angular-devkit-build-angular-builds.git --force
 
       - run: npm ci --force && npm run build --force && ng build 
       - uses: FirebaseExtended/action-hosting-deploy@v0
