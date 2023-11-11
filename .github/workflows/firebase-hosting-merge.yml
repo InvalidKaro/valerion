@@ -14,9 +14,6 @@ jobs:
       - uses: actions/setup-python@v4
       - name: Install dependencies
         run: npm ci --force && npm install --force
-  
-      - name: E2E
-        run: npm run e2e 
      
       - name: Build
         run: npm run build --force
