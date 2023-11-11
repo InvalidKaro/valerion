@@ -18,11 +18,11 @@ jobs:
           node-version: 19
 
       - name: Install Angular CLI
-        run: npm install -g @angular/cli
+        run: npm install -g @angular/cli --force
 
       - name: Install dependencies and build
         run: |
-          npm install
+          npm install --force
           ng build
 
       - name: Deploy to Firebase Hosting
